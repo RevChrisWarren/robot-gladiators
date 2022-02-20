@@ -12,9 +12,6 @@ console.log(enemyNames[1])
 console.log(enemyNames[2]);
 console.log(enemyNames.length);
 
-    //Alert players that they are starting the round
-    window.alert("Welcome to Robot Gladiators!");
-
 var fight = function(enemyName) {
     //repeat and exeute as long as the enemy-robot is alive
     while(playerHealth > 0 && enemyHealth > 0) {
@@ -73,6 +70,14 @@ else {
 }
 }
 
+if (playerHealth > 0) {
+    //Alert players that they are starting the round
+    window.alert("Welcome to Robot Gladiators! Round" + ( i + 1 ) );
+}
+else {
+    window.alert("You have lost your robot in battle! Game Over!");
+    break;
+}
 for(var i = 0; i < enemyNames.length; i++) {
     var pickedEnemyName = enemyNames[i];
     enemyHealth = 50;
